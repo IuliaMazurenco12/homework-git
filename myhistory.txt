@@ -1,0 +1,28 @@
+  899  git clone https://github.com/IuliaMazurenco12/homework-git.git
+  900  touch .gitignore
+  901  cd howework-git
+  903  /opt/121225-wde/iuliamazurenco/homework-git
+  904  cd /opt/121225-wde/iuliamazurenco/homework-git
+  905  rm -rf homework-git
+  906  https://github.com/IuliaMazurenco12/homework-git.git
+  907  git clone https://github.com/IuliaMazurenco12/homework-git.git
+  908  cd homework-git.git
+  909  cd homework-git
+  911  touch .gitignore
+  914  ls -al homework-git
+  916  git checkout -b feature
+  917  git add .
+  918  git commit -m "first commit"
+  919  git remote -v
+  920  git push origin feature
+  921  git commit --amend -m "first commit amend word"
+  922  git push --force origin feature
+  923  git checkout main
+  924  git log --all --oneline
+  925  git checkout -b main
+  926  git merge feature
+  927  git push origin main
+  929  git add history.txt
+  930  git commit -m "add history from homework 12"
+  931  git push origin main
+  933  history | grep git > myhistory.txt
