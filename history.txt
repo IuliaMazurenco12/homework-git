@@ -1,0 +1,928 @@
+    1  clear
+    2  cat shadow_fragment.db | head -1
+    3  awk --help
+    4  awk -F "2##24awk --help95" shadow_fragment.db 
+    5  awk -F '##24!!95' '{print $0}' shadow_fragment.db 
+    6  awk -F '##24!!95' -v OFS=',' '{$1=$1; print $0}' shadow_fragment.db | head -1
+    7  awk -F '##24!!95' '{print $15}' shadow_fragment.db 
+    8  awk -F '##24!!95' '{print $12, $15}' shadow_fragment.db  | tail -5
+    9  awk -F '##24!!95' '{print $12, $15}' shadow_fragment.db 
+   10  awk -F '##24!!95' '{print $12, $15}' shadow_fragment.db  | head -5
+   11  awk -F '##24!!95' '{print $11, $15}' shadow_fragment.db  | head -5
+   12  awk -F '##24!!95' '$15 == "operator" {print $11, $15}' shadow_fragment.db 
+   13  awk -F '##24!!95' '$15 == "operator" {print $11' shadow_fragment.db 
+   14  awk -F '##24!!95' '$15 == "operator" {print $11'} shadow_fragment.db 
+   15  exit
+   16  cd /opt/
+   17  ls -al 252425-ptm/
+   18  ls -al 121225-ptm/
+   19  ls -al 101025-ptm/
+   20  cat 101025-ptm/VAndreev-md5-sum.txt 
+   21  ls -al 101025-ptm/VAndreev/
+   22  ls -al 010825-ptm/
+   23  ls -al 250425-ptm/
+   24  ls -al 210225-ptm/
+   25  ls -al 091224-ptm/
+   26  ls -al 111124-ptm/
+   27  ls -al 160924-ptm/
+   28  ls -al 290724_ptm/
+   29  ls -al 290724-ptm/
+   30  ls -al 310524-ptm/
+   31  ls -al 220424-ptm/
+   32  ls -al 220224-ptm/
+   33  ls -al 190224-ptm/
+   34  ls -al 060326-ptm/
+   35  cd 121225-ptm/baranovskyi/
+   36  ls -al
+   37  cd ..
+   38  tree
+   39  cd trofimov/
+   40  ls -al
+   41  cat history.txt 
+   42  cd ..
+   43  cd 060326-ptm/
+   44  tree
+   45  cd katharina/
+   46  cat README.txt 
+   47  cat /opt/060326-ptm/Vitalii_Malcov/README.txt 
+   48  exit
+   49  cd /opt/060326-ptm
+   50  ls -al
+   51  cd bohdansl
+   52  ls -al
+   53  cd ~/Downloads && scp -r ec2-user@linux.itcareerhub.de:/opt/060326-ptm/bohdansl/quest
+   54  scp -r ec2-user@linux.itcareerhub.de:/opt/060326-ptm/bohdansl/quest
+   55  exit
+   56  l
+   57  ls
+   58  mkdir quest
+   59  cd quest
+   60  pwd
+   61  ls
+   62  ./shell-master_standalone.sh 
+   63  ls
+   64  rm shell-master_standalone.sh 
+   65  cd quest/
+   66  ls
+   67  vim gen.sh
+   68  nvim gen.sh
+   69  vim gen.sh
+   70  ls
+   71  mkdir level_2
+   72  cd level_
+   73  cd level_2
+   74  ls
+   75  vim gen.sh
+   76  sh gen.sh
+   77  vim gen.sh 
+   78  sh gen.sh 
+   79  vim gen.sh 
+   80  head shadow_fragment.db 
+   81  wc -wl shadow_fragment.db 
+   82  ls
+   83  rm gen.sh 
+   84  cd ..
+   85  l
+   86  ls
+   87  mkdir level_3
+   88  l
+   89  ls
+   90  cd level_3
+   91  vim gen.sh
+   92  ls
+   93  pwd
+   94  ls
+   95  sh generate.sh 
+   96  ls
+   97  rm generate.sh 
+   98  ls
+   99  ls -la
+  100  ls -la | wc -l
+  101  ды
+  102  ls
+  103  cd ..
+  104  ls
+  105  mkdir level_4
+  106  cd level_4
+  107  ls
+  108  sh generate.sh 
+  109  ls
+  110  rm generate.sh 
+  111  ls
+  112  cd ..
+  113  l
+  114  ls
+  115  cd level_1
+  116  ls
+  117  printf "\033[1;34m## Уровень 1\033[0m\n\033[1mЗадание: Поиск пересечения данных\033[0m\n\nВам предоставлены файлы \033[32mshell_history.log\033[0m и \033[32mavailable_sectors.db\033[0m.\n\n\033[1;33mИнструкция:\033[0m\n1. Найдите все названия секторов из команд \033[36mcd sector_...\033[0m в истории shell_history.log.\n2. Сопоставьте этот список с перечнем в базе available_sectors.db.\n3. Найдите один сектор, который присутствует в обоих списках.\n\nСохраните полное название этого сектора (\033[1;35msector_xxxx\033[0m) одной строкой в файле \033[4manswer.txt\033[0m в этой папке.\n\n\033[90m---\033[0m\n" > task.txt
+  118  cat task.txt 
+  119  vim task.txt 
+  120  cat task.txt 
+  121  vim task.txt 
+  122  cat task.txt 
+  123  vim task.txt 
+  124  cat task.txt 
+  125  clear
+  126  cat task.txt 
+  127  ls
+  128  cd ..
+  129  cd level_2
+  130  ls
+  131  printf "\033[1;34m## Уровень 2\033[0m\n\033[1mЗадание: Парсинг таблиц\033[0m\n\nВам предоставлен файл \033[32mshadow_fragment.db\033[0m.\n\n\033[1;33mИнструкция:\033[0m\n1. Определите разделитель полей в первой строке заголовка — это символы между словами \033[36mtype\033[0m и \033[36mdate\033[0m.\n2. Используя этот разделитель, найдите строку, где поле \033[32mlevel\033[0m равно \033[1;35moperator\033[0m.\n3. Извлеките значение из столбца \033[1;35mcode\033[0m для этой строки.\n" > task2.txt
+  132  ls
+  133  mv task2.txt task.txt
+  134  cat task.txt 
+  135  vim task.txt 
+  136  cat task.txt 
+  137  head shadow_fragment.db 
+  138  cd ..
+  139  cd level_3
+  140  ls
+  141  ls
+  142  ls -d
+  143  ls task
+  144  printf "\033[1;34m## Уровень 3\033[0m\n\033[1mЗадание: Анализ логов\033[0m\n\nВам предоставлен массив файлов \033[32mvpn_*.log\033[0m.\n\n\033[1;33mИнструкция:\033[0m\nНайдите значение \033[1;35mtrace_exit_node\033[0m уникальной сессии.\n\n\033[1;33mУсловия:\033[0m\n1. Идентификатор сессии (\033[36msess=...\033[0m) должен встречаться в логах этого каталога \033[1mровно дважды\033[0m.\n2. В первой строке этой сессии поле \033[32mevent\033[0m имеет значение \033[1;35mhandoff\033[0m.\n3. Во второй строке этой же сессии находится искомое значение \033[1;35mtrace_exit_node\033[0m.\n" > task.txt
+  145  vim task.txt 
+  146  cat task.txt 
+  147  cd ..
+  148  cd level_1
+  149  ls
+  150  vim task.txt 
+  151  cat task.txt 
+  152  vim task.txt 
+  153  cat task.txt 
+  154  cd ..
+  155  ls
+  156  cd level_4
+  157  ls
+  158  ls
+  159  printf "\033[1;34m## Уровень 4\033[0m\n\033[1mЗадание: Анализ аномальной активности\033[0m\n\nВам предоставлен файл \033[32maccess.log\033[0m. Каждая строка имеет вид:\n\n\033[90m2026-04-08 12:00:01 IP:192.168.1.15 STATUS:200 BYTES:512\033[0m\n\n\033[1;33mЦель:\033[0m найти \033[1;35mтоп-3 IP-адреса\033[0m, которые \033[1mчаще всего\033[0m встречаются среди запросов с \033[31mSTATUS:500\033[0m (ошибка сервера).\n\n\033[1;33mПодсказка по шагам:\033[0m\n1. Оставить только строки со статусом \033[31m500\033[0m.\n2. Извлечь из них IP (поле \033[36mIP:...\033[0m).\n3. Посчитать частоту каждого IP, отсортировать по убыванию.\n4. Взять три лидирующих адреса в этом порядке.\n" > task.txt
+  160  vim task.txt 
+  161  ls
+  162  cat task.txt 
+  163  cd ..
+  164  ls
+  165  cd level_1
+  166  ls
+  167  chmod 444 *
+  168  ls -la
+  169  cat task.txt 
+  170  vim task.txt 
+  171  cat task.txt 
+  172  cd ..
+  173  cd level_2
+  174  ls
+  175  chmod 444 *
+  176  cd ../level_3
+  177  chmod 444 *
+  178  cd ../level_4/
+  179  chmod 444 *
+  180  cd ..
+  181  ls
+  182  cd ..
+  183  ls
+  184  ls
+  185  cd ..
+  186  ls
+  187  mv quest/ test-shmest
+  188  ls
+  189  chmod 555 test-shmest/
+  190  mv test-shmest/ lala
+  191  ls
+  192  mv lala test
+  193  cp test/quest/ quest
+  194  cp -r test/quest/ quest
+  195  ls
+  196  mv test t0904bak
+  197  ls
+  198  cd quest
+  199  ls
+  200  rm -r level_1
+  201  ls level_1
+  202  cd level_1
+  203  cat task.txt 
+  204  cd ..
+  205  pwd
+  206  cd ..
+  207  ls
+  208  ls -la
+  209  cd quest/
+  210  touch wefowef
+  211  ls
+  212  rm wefowef 
+  213  ls
+  214  cd level_1
+  215  ls
+  216  touch wefoijwef
+  217  ls
+  218  rm wefoijwef 
+  219  ls
+  220  ls
+  221  task.txt
+  222  cat task.txt 
+  223  cd ..
+  224  ls
+  225  pwd
+  226  ls
+  227  history head
+  228  history | head
+  229  cd ..
+  230  pwd
+  231  ls
+  232  cd opt/
+  233  ls
+  234  cd 121225-ptm/
+  235  ls
+  236  cd suligan/
+  237  ls
+  238  mkdir random_files even_files
+  239  cd random_files/
+  240  for i in {1..100}; do touch "$RANDOM"; done
+  241  ls
+  242  nano move_even.sh
+  243  chmod +x move_even.sh
+  244  ./move_even.sh
+  245  nano move_even.sh
+  246  cd ..
+  247  cd even_files/
+  248  ls
+  249  cd ..
+  250  cd random_files/
+  251  ./move_even.sh
+  252  ls
+  253  nano move_even.sh 
+  254  rm move_even.sh
+  255  ls
+  256  cd ..
+  257  nano move_even.sh
+  258  chmod +x move_even.sh
+  259  ./move_even.sh
+  260  cd even_files/
+  261  ls
+  262  cd ..
+  263  ls
+  264  cd quest/
+  265  l
+  266  ls
+  267  cd level_
+  268  cd level_1
+  269  ls
+  270  cat task.txt 
+  271  head shell_history.log 
+  272  sed 's/cd //' | head
+  273  sed 's/cd //' shell_history.log | head
+  274  grep cd shell_history.log | sed 's/cd //' shell_history.log | head
+  275  grep cd shell_history.log | sed 's/cd //' | head
+  276  grep cd shell_history.log | sed 's/cd //' > hist
+  277  grep -Fxf hist available_sectors.db 
+  278  grep -Fxf hist available_sectors.db > answer
+  279  vim answer 
+  280  cd ..
+  281  l
+  282  ls
+  283  cd level_2
+  284  ls
+  285  cat task.txt 
+  286  head -2 shadow_fragment.db 
+  287  head -2 shadow_fragment.db | sed 's/##24!!95//' 
+  288  head -2 shadow_fragment.db | sed 's/##24!!95//g' 
+  289  head -2 shadow_fragment.db | sed 's/##24!!95/ /g' 
+  290  sed 's/##24!!95/ /g' shadow_fragment.db | grep operator
+  291  sed 's/##24!!95/ /g' shadow_fragment.db | awk '$15==operator' '{print $11}'
+  292  sed 's/##24!!95/ /g' shadow_fragment.db | awk '$15==operator {print $11}'
+  293  sed 's/##24!!95/ /g' shadow_fragment.db | grep operator | awk '{print $11}'
+  294  sed 's/##24!!95/ /g' shadow_fragment.db | grep operator | awk '{print $11}'
+  295  grep operator
+  296  grep operator -r
+  297  sed 's/##24!!95/ /g' shadow_fragment.db | grep operator | awk '{print $11}'
+  298  echo "sed 's/##24sed 's/##24!!95/ /g' shadow_fragment.db | grep operator | awk '{print $11}'95/ /g' shadow_fragment.db | grep operator | awk '{print $11}'" > answer.txt
+  299  ls
+  300  cat answer.txt 
+  301  sed 's/##24!!95/ /g' shadow_fragment.db | grep operator | awk '{print $11}'
+  302  sed 's/##24!!95/ /g' shadow_fragment.db | grep operator | awk '{print $11}' > answer.txt 
+  303  vim answer.txt 
+  304  vim answer.txt 
+  305  cd ..
+  306  ls
+  307  cd level_3/
+  308  ls
+  309  cat task.txt 
+  310  grep event=handoff | head
+  311  grep event=handoff or | head
+  312  grep event=handoff -r | head
+  313  grep sess120520
+  314  grep sess120520 -r
+  315  grep event=handoff -r | wc -l
+  316  grep event=handoff -r | grep 'sess=sess' | wc -l
+  317  grep event=handoff -r | grep 'sess=sess' 
+  318  cat vpn_369
+  319  cat vpn_369.log 
+  320  grep event=handoff -r | head
+  321  grep event=handoff -r -C2 | head
+  322  grep event=handoff -r -C2 | grep 'sess=' |
+  323  grep event=handoff -r -C2 | grep 'sess=' | head
+  324  grep -h
+  325  grep --help
+  326  grep event=handoff -r -A2 | grep 'sess=' | head
+  327  grep event=handoff -r -A1 | grep 'sess=' | head
+  328  grep event=handoff -r -A1 | grep 'sess=' | grep -v 'trace_exit_node=_'
+  329  grep event=handoff -r -A1 | grep 'sess=' | grep 'trace_exit_node=' | grep -v 'trace_exit_node=_'
+  330  grep sess=sess -r
+  331  gen_name
+  332  ls
+  333  rm -rf *
+  334  ls
+  335  pwd
+  336  ды
+  337  ls
+  338  sh generate.sh 
+  339  ls
+  340  grep event=handoff -r -A1 | grep 'sess=' | grep 'trace_exit_node=' | grep -v 'trace_exit_node=_'
+  341  cd ..
+  342  cd level_2
+  343  ls
+  344  cd ..
+  345  cd level_3
+  346  grep event=handoff -r -A1 | grep 'sess=' | grep 'trace_exit_node=' | grep -v 'trace_exit_node=_'
+  347  rm generate.sh 
+  348  grep event=handoff -r -A1 | grep 'sess=' | grep 'trace_exit_node=' | grep -v 'trace_exit_node=_'
+  349  cd ..
+  350  cd level_2
+  351  ls
+  352  rm shadow_fragment.db 
+  353  sh generate.sh 
+  354  ls
+  355  rm -rf shadow_fragment.db 
+  356  sh generate.sh 
+  357  l
+  358  ls
+  359  cd ..
+  360  cd level_4
+  361  ls
+  362  cat task.txt 
+  363  ls
+  364  rm access.log 
+  365  ls
+  366  ls
+  367  sh generate.sh 
+  368  rm generate.sh 
+  369  ls
+  370  cd ..
+  371  ls | grep sh
+  372  cd 4
+  373  cd level_4
+  374  head access.log 
+  375  cat task.txt 
+  376  grep STATUS:500 | wc -l
+  377  grep STATUS:500 -к | wc -l
+  378  grep STATUS:500 -r | wc -l
+  379  grep STATUS:500 -r | head
+  380  grep STATUS:500 -r | sort | head
+  381  grep STATUS:500 access.log | sort | head
+  382  grep STATUS:500 access.log | sort -t':' -k5 -rn | head
+  383  grep STATUS:500 access.log | sort -t':' -k4 -rn | head
+  384  grep STATUS:500 access.log | sort -k5.7 -rn | head
+  385  grep STATUS:500 access.log | sort -k5.7 -rn | head
+  386  sort -h
+  387  sort --help
+  388  grep STATUS:500 access.log | sort -k5.7 -g | head
+  389  du -h
+  390  cd ..
+  391  du -h
+  392  du -h | sort -h
+  393  grep STATUS:500 access.log | awk '{print $5 $3}' | sed 's/BYTES://' | head
+  394  cd level_4
+  395  grep STATUS:500 access.log | awk '{print $5 $3}' | sed 's/BYTES://' | head
+  396  grep STATUS:500 access.log | awk '{print $5, $3}' | sed 's/BYTES://' | head
+  397  grep STATUS:500 access.log | awk '{print $5, $3}' | sed 's/BYTES://' | sort | head
+  398  grep STATUS:500 access.log | awk '{print $5, $3}' | sed 's/BYTES://' | sort -rn | head
+  399  cat task.txt 
+  400  grep STATUS:500 access.log | awk '{print $3}' | head
+  401  grep STATUS:500 access.log | awk '{print $3}' | uniq -c | head
+  402  grep STATUS:500 access.log | awk '{print $3}' | uniq -c | sort -r | head
+  403  grep STATUS:500 access.log | awk '{print $3}' | uniq -c | sort -r | head -3
+  404  grep STATUS:500 access.log | awk '{print $3}' | sort | uniq -c | head -3
+  405  grep STATUS:500 access.log | awk '{print $3}' | sort | uniq -c | head
+  406  grep STATUS:500 access.log | awk '{print $3}' | sort | uniq -c | sort -rn | head
+  407  grep STATUS:500 access.log | awk '{print $3}' | sort | uniq -c | sort -rn | head -3
+  408  exit
+  409  cd /opt/060326-ptm/kuzan/
+  410  echo "errrrre re" > erre.txt
+  411  ls -a
+  412  pwd /opt/060326-ptm/kuzan/
+  413  exit
+  414  cd /opt/060326-ptm/kuzan/
+  415  ls -a
+  416  rm --help
+  417  rm erre.txt
+  418  ls -a
+  419  exit
+  420  ls -al
+  421  cd opt/
+  422  ls -al
+  423  cd ~
+  424  ls -al
+  425  cd opt/121225-wde
+  426  la -sl
+  427  ls -al
+  428  cd opt/
+  429  ls -al
+  430  cd 121225-ptm/
+  431  ls -al
+  432  ды 
+  433  cd ~
+  434  ls -al
+  435  ls -al /tmp/
+  436  ls -al /opt/121225-wde/
+  437  ls -al
+  438  cd /opt/121225-wde/RLening/
+  439  ls -al
+  440  nano task_RLening.sh
+  441  chmod +x task_RLening.sh 
+  442  ls -al
+  443  ./task_RLening.sh 
+  444  ls -al
+  445  crontab -e
+  446  tar -czf files.tar.gz *_$(date +"%d.%m.%y")
+  447  ls -al
+  448  history >> history.txt
+  449  tar -czf final.tar.gz *_03.03.26 history.txt
+  450  ls -al
+  451  cat final.tar.gz 
+  452  ls -al
+  453  scp ec2-user@linux.itcareerhub.de:/opt/121225-wde/RLening/final.tar.gz 
+  454  scp ec2-user@linux.itcareerhub.de:/opt/121225-wde/RLening/final.tar.gz ~/Downloads/
+  455  утв
+  456  end
+  457  quit
+  458  close
+  459  exit
+  460  cd /opt/121225-wde/RLening/
+  461  ls -al
+  462  scp ec2-user@linux.itcareerhub.de:/opt/121225-wde/VAndreev/TestFile.txt 
+  463  scp ec2-user@linux.itcareerhub.de:/opt/121225-wde/RLening/final.tar.gz ~/Downloads/
+  464  exit
+  465  cd /opt/060326-ptm/
+  466  cd eva
+  467  tree
+  468  cat quest/level_2/task.txt 
+  469  cat quest/level_3/task.txt 
+  470  cd quest/level_3/
+  471  cat vpn_
+  472  cat vpn_2.log 
+  473  cat * | head -1
+  474  cat . | head -1
+  475  exit
+  476  history > history.txt 
+  477  cat history.txt 
+  478  ls
+  479  cd quest/
+  480  ls
+  481  cd level_3
+  482  ls
+  483  cd ..
+  484  ls
+  485  cd ..
+  486  l
+  487  ls
+  488  cp t0904bak/quest/level_3/task.txt quest/level_3/
+  489  cd quest/level_3/
+  490  ls
+  491  cat task.txt 
+  492  pwd
+  493  cat /opt/060326-ptm/hellwig/quest/level_3/task.txt 
+  494  св юю
+  495  cd ..
+  496  ls
+  497  cd level_2/
+  498  ls
+  499  cat task.txt 
+  500  cd ..
+  501  зцв
+  502  pwd
+  503  cd opt/060326-ptm
+  504  ls -al
+  505  pwd
+  506  cd opt
+  507  ls -al
+  508  cd /
+  509  cd /opt/
+  510  ls
+  511  ls -al
+  512  cd 060326-ptm/
+  513  ls -al
+  514  cd cd hellwig/
+  515  cd hellwig/
+  516  ls -al
+  517  cd quest/
+  518  ls -al
+  519  cd..
+  520  ls -al
+  521  cd /
+  522  ls -al
+  523  cd opt/
+  524  ls -al
+  525  cd 060326-ptm/
+  526  ls -al
+  527  cp hellwig/quest/ khizhnyak/
+  528  ls -al
+  529  cd hellwig/
+  530  ls -al
+  531  cd quest/
+  532  ls -al
+  533  cd .
+  534  pwd
+  535  cd ..
+  536  pwd
+  537  cd ..
+  538  pwd
+  539  cd khizhnyak/
+  540  ls -al
+  541  cd --
+  542   pwd
+  543  cd /
+  544  pwd
+  545  ls -al
+  546  cd opt/060326-ptm/
+  547  cp -r hellwig/quest/* khizhnyak/
+  548  cd khizhnyak/
+  549  ls -al
+  550  cd /
+  551  pwd
+  552  cd opt/060326-ptm/
+  553  cp -r hellwig/quest/* khizhnyak/quest/
+  554  cp -r hellwig/quest khizhnyak/
+  555  cd khizhnyak/
+  556  ls ßal
+  557  ls -al
+  558  rm level_1
+  559  rm -r level_1
+  560  rm -rf level_2
+  561  rm -rf level_3
+  562  rm -rf level_4
+  563  ls -al
+  564  cd NewFolder/
+  565  ls -al
+  566  cd ..
+  567  rm -r NewFolder/
+  568  ls -al
+  569  cd quest/
+  570  ls -al
+  571  cd level_1
+  572  ls -al
+  573  cat task.txt 
+  574  grep "cd sector_" shell_history.log 
+  575  diff
+  576  cat available_sectors.db 
+  577  awk --help
+  578  grep -f available_sectors.db shell_history.log
+  579  cat task.txt 
+  580  ls -al
+  581  cat answer 
+  582  grep -f available_sectors.db shell_history.log
+  583  history | tail -2 
+  584  history | tail -3 > my_answer 
+  585  cat my_answer 
+  586  cd ..
+  587  cd level_2
+  588  ls -al
+  589  cat task.txt 
+  590  head shadow_fragment.db 
+  591  cat shadow_fragment.db awk '{gsub("##80!!51", "");print}'
+  592  cat shadow_fragment.db | awk '{gsub("##80!!51", "");print}'
+  593  cat shadow_fragment.db | awk '{gsub("##80!!51", "");print}' 
+  594  cat shadow_fragment.db | awk '{gsub("##80!!51", "");print}' | head
+  595  cat shadow_fragment.db | awk '{gsub("##80!!51", "|");print}' | head
+  596  cat task.txt 
+  597  cat shadow_fragment.db | awk 'BEGIN{RS="date"; FS="type"}NF>1{print $NF}' 
+  598  cat shadow_fragment.db | grep "(?s)(?<=type )(.*)(?= date)" 
+  599  cat shadow_fragment.db | grep -o "(?s)(?<=type )(.*)(?= date)" 
+  600  cat shadow_fragment.db | grep -zo "(?s)(?<=type )(.*)(?= date)" 
+  601  cat shadow_fragment.db | grep -zoP "(?s)(?<=type )(.*)(?= date)" 
+  602  grep -zoP "(?s)(?<=type )(.*)(?= date)" shadow_fragment.db 
+  603  grep -zoP "(?s)(?<=type )(.*)(?=date)" shadow_fragment.db 
+  604  grep -zoP "(?s)(?<='type' )(.*)(?='date')" shadow_fragment.db 
+  605  sed -n '/Here/,/String/p' shadow_fragment.db 
+  606  sed -n '/type/,/date/p' shadow_fragment.db 
+  607  grep -o -P '(?<=type).*(?=date)' shadow_fragment.db 
+  608  grep -o '(?<=type).*(?=date)' shadow_fragment.db 
+  609  grep -o -P '(?<=type).*(?=date)' shadow_fragment.db 
+  610  ls -al
+  611  cat answer.txt 
+  612  cat task.txt 
+  613  sed 's/##80!!51/ /g' shadow_fragment.db
+  614  cat answer.txt 
+  615  sed 's/##80!!51/ /g' shadow_fragment.db | head
+  616  cat task.txt 
+  617  sed 's/##80!!51/ /g' shadow_fragment.db | tail
+  618  sed 's/##80!!51/ /g' shadow_fragment.db | awk '{print $11}'
+  619  sed 's/##80!!51/ /g' shadow_fragment.db | head
+  620  sed 's/##80!!51/ /g' shadow_fragment.db |  | grep 
+  621  cat task.txt 
+  622  sed 's/##80!!51/ /g' shadow_fragment.db | grep operator | awk 
+  623  sed 's/##80!!51/ /g' shadow_fragment.db | grep "operator" |awk '{print $11}'
+  624  sed 's/##80!!51/ /g' shadow_fragment.db | grep "root" |awk '{print $11}'
+  625  sed 's/##80!!51/ /g' shadow_fragment.db | grep "0000" |awk '$2 == "operator"' file.txtawk '$2 == "operator"' file.txtawk '{print $11}'
+  626  cat task.txt 
+  627  awk '$15 == "operator"' shadow_fragment.db 
+  628  awk '$11 == "operator"' shadow_fragment.db 
+  629  awk '$14 == "operator"' shadow_fragment.db 
+  630  sed 's/##80!!51/ /g' shadow_fragment.db | awk '$15 == "operator"'
+  631  sed 's/##80!!51/ /g' shadow_fragment.db | awk '$15 == "operator"' 
+  632  sed 's/##80!!51/ /g' shadow_fragment.db | awk '$15 == "operator"' | awk '{print $11}'
+  633  grep -o -P '(?<=type).*(?=date)' shadow_fragment.db
+  634  sed 's/##80!!51/ /g' shadow_fragment.db | awk '$15 == "operator"' | awk '{print $11}'
+  635  history |tail -3 >> my_answer.txt
+  636  cat my_answer.txt 
+  637  cd ..
+  638  cd level_3
+  639  ls -al
+  640  pwd
+  641  cd ..
+  642  cd level_4
+  643  ls -al
+  644  cat task.txt 
+  645  cat access.log 
+  646  cat task.txt 
+  647  cat access.log | grep 500
+  648  cat access.log | grep STATUS:500
+  649  cat task.txt 
+  650  cat access.log | grep STATUS:500 | awk 'print {$3}'
+  651  cat access.log | grep STATUS:500 | awk '{print $3}'
+  652  cat task.txt 
+  653  cat access.log | grep STATUS:500 | awk '{print $3}'| sort -nr
+  654  cat access.log | grep STATUS:500 | awk '{print $3}'| sort -n
+  655  cat access.log | grep STATUS:500 | awk '{print $3}'| 
+  656  cat access.log | grep STATUS:500 | awk '{print $3}'
+  657  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (word in count) print word, count[word]}'
+  658  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (w in count) print w, count[w]}'
+  659  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (w in count) print count[w], w}'
+  660  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (w in count) print count[w], w}' | sort
+  661  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (w in count) print count[w], w}' | sort -n
+  662  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (w in count) print count[w], w}' | sort -nr
+  663  cat task.txt 
+  664  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (w in count) print count[w], w}' | sort -nr | head 3
+  665  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (w in count) print count[w], w}' | sort -nr | head -3
+  666  history | tail -2 >> my_answer.txt
+  667  cat my_answer.txt 
+  668  cat access.log | grep STATUS:500 | awk '{print $3}' | awk '{count[$0]++} END {for (w in count) print count[w], w}' | sort -nr | head -3 >> my_answer.txt 
+  669  cat my_answer.txt 
+  670  cd ..
+  671  cd level_2
+  672  cat my_answer.txt 
+  673  sed 's/##80!!51/ /g' shadow_fragment.db | awk '$15 == "operator"' | awk '{print $11}' >> my_answer.txt 
+  674  cat my_answer.txt 
+  675  cd ..
+  676  cd..
+  677  cd ..
+  678  cd hellwig/
+  679  cd q
+  680  cd quest/
+  681  cd level_3
+  682  ls -al
+  683  cd ..
+  684  cd quest/
+  685  cd level_3
+  686  ls -al
+  687  ls
+  688  cd ..
+  689  ls -r
+  690  ls 
+  691  ls ..
+  692  cd ..
+  693  ls -al
+  694  cd quest/level_3
+  695  ls | grep -n vpn
+  696  ls | grep -v vpn
+  697  cp task.txt /opt/060326-ptm/khizhnyak/quest/level_3
+  698  ls | grep -v vpn
+  699  cd /opt/060326-ptm/khizhnyak/quest/level_3
+  700  ls | grep -v vpn
+  701  cat task.txt 
+  702  cat vpn_1.log 
+  703  pwd
+  704  grep "sess=.*event=handoff.*trace_exit_node=" *.log
+  705  grep "sess=.*event=handoff.*trace_exit_node=" *.log | grep -o "sess=[^ ]*" 
+  706  grep "sess=" *.log | grep "event=handoff" | grep "trace_exit_node=" | grep -o "sess=[^ ]*" | uniq -c
+  707  grep "sess=" *.log | grep "event=handoff" | grep "trace_exit_node=" | grep -o "sess=[^ ]*" | uniq -c | grep " 2 sess=" | awk '{print $2}'
+  708  grep "sess=" *.log | grep "event=handoff" | grep "trace_exit_node=" 
+  709  grep "sess=" *.log | grep "event=handoff" | grep "trace_exit_node=" | grep -o "sess=[^ ]*" 
+  710  grep "sess=" *.log | grep "event=handoff" | grep "trace_exit_node=" | grep -o "sess=[^ ]*" | uniq -c 
+  711  grep "sess=" *.log | grep "event=handoff" | grep "trace_exit_node=" | grep -o "sess=[^ ]*" | uniq -c | grep " 2 sess="
+  712  cat task.txt 
+  713  cat vpn_1.log 
+  714  cat * | grep exit_node
+  715  cat * | grep exit_node | grep sess
+  716  cat task.txt 
+  717  cat * | grep exit_node | grep sess
+  718  cat * | grep exit_node | grep sess | grep -v trace_exit_node=_
+  719  cat *  | grep -v trace_exit_node=_
+  720  cat * | grep exit_node | grep -v trace_exit_node=_
+  721  cat * | grep exit_node | grep -v trace_exit_node=_ | grep sess
+  722  cat task.txt 
+  723  cat * | grep sess111771
+  724  cat vpn_1.log 
+  725  cat * | grep -v trace_exit_node=_ |grep trace_exit_node  
+  726  cat task.txt 
+  727  cat * | grep -v trace_exit_node=_ |grep trace_exit_node  | grep sess
+  728  cat * |grep trace_exit_node  | grep sess
+  729  cat * | grep -v trace_exit_node=_ |grep trace_exit_node  | grep sess
+  730  cat * | grep sess111771
+  731  cat * |grep trace_exit_node  | grep sess
+  732  cat * | grep sess117440
+  733  cat * | awk -F, 'a[$3]++{print $3}'
+  734  cat * | awk -F' ' 'a[$3]++{print $3}'
+  735  cat * | awk -F' ' 'a[$2]++{print $2}'
+  736  cat * | grep sess | awk -F' ' 'a[$2]++{print $2}'
+  737  cat * | grep sess | awk -F' ' 'a[$3]++{print $3}'
+  738  cat * | grep sess | awk -F' ' 'a[$3]++{print $1 $2 $3}'
+  739  cat * | grep sess | awk -F' ' 'a[$3]++{print $1 $2 $3 $4 $5}'
+  740  cat * | grep sess | awk -F' ' 'a[$3]++{print $1 ' '  $2 $3 $4 $5}'
+  741  cat * | grep sess | awk -F' ' 'a[$3]++{print $1 $2 $3 $4 $5}'
+  742  cat * | grep sess | awk -F' ' 'a[$3]++{print $1 $2 $3 $4 $5}' | grep trace
+  743  cat * | grep sess | awk -F' ' 'a[$3]++{print $1 $2 $3 $4 $5}' 
+  744  cat * | grep sess | awk -F' ' 'a[$3]++{print $1 $2 $3 $4 $5}' | grep ha
+  745  cat * | grep sess | awk -F' ' 'a[$3]++{print $1 $2 $3 $4 $5}' | grep trace
+  746  cat task.txt 
+  747  cat * |grep trace_exit_node  | grep sess | grep -v handoff
+  748  cat * |grep trace_exit_node 
+  749  cat * |grep trace_exit_node  
+  750  cat * | grep -E 'see|event|trace'
+  751  cat * | grep -E 'ses|event|trace'
+  752  cat * | grep -E 'event|trace' | grep sess
+  753  cat * | grep -E 'handoff|trace' | grep sess
+  754  cat * | grep -E 'handoff|trace' | grep sess | awk -F' ' 'a[$3]++{print $1 $2 $3 $4 $5}'
+  755  cat * | grep sess117569
+  756  cat * | grep sess117440
+  757  cat * | grep sess117
+  758  cat * | grep sess1177
+  759  cat * | grep sess111771
+  760  cat task.txt 
+  761  cat * | wc -1
+  762  cat * | grep sess | wc 
+  763  cat * | grep sess | wc -l
+  764  awk '
+  765  /sess=/ {
+  766      if ($0 ~ /event=handoff/) {
+  767          sess=$3
+  768      }
+  769      if ($0 ~ /trace_exit_node=/) {
+  770          print $NF
+  771      }
+  772  }
+  773  ' vpn_*.log
+  774  cat task.txt 
+  775  cat * |grep trace_exit_node  | grep sess | grep -v handoff
+  776  trace_exit_node=_
+  777  grep "sess=" vpn_*.log | grep -o "sess=[^ ]*" | sort | uniq -c
+  778  grep "sess=" vpn_*.log | grep -o "sess=[^ ]*" | sort | uniq -c | grep 2
+  779  grep "sess=" vpn_*.log | grep -o "sess=[^ ]*" | sort | uniq -c | grep "2 sess"
+  780  cat task.txt 
+  781  grep -o "sess=[^ ]*" vpn_*.log | sort | uniq -c | grep "^ *2 " | awk '{print $2}'
+  782  grep -o "sess=[^ ]*" vpn_*.log | sort
+  783  grep -o  | sort | uniq -d | grep "^ *2 " | awk '{print $2}'
+  784  grep -o  | sort | uniq -D | grep "^ *2 " | awk '{print $2}'
+  785  grep -o  | sort | uniq -c | grep "^ *2 " | awk '{print $2}'
+  786  uniq --help
+  787  grep -o  | sort | uniq -c 
+  788  grep -o "sess=[^ ]*" vpn_*.log | sort | uniq -c 
+  789  grep -o "sess=[^ ]*" vpn_*.log | sort 
+  790  grep -o "sess=[^ ]*" vpn_*.log | sort | uniq -c 
+  791  grep -o  | sort | uniq -c | grep "^ *2 " 
+  792  grep -o "sess=[^ ]*" vpn_*.log | sort | uniq -c | grep "^ *2 "
+  793  grep -o  | sort | uniq -D | grep "^ *2 " | awk '{print $2}'
+  794  grep -o "sess=[^ ]*" vpn_*.log | sort | uniq -c | grep "^ *2 " | awk '{print $2}'
+  795  grep -o "sess=[^ ]*" vpn_*.log | sort | uniq -c | grep "^ *2 " 
+  796  grep -o "sess111771" vpn_*.log 
+  797  grep "sess111771" vpn_*.log 
+  798  grep -o "sess=[^ ]*" vpn_*.log | sort | uniq -c | grep "^ *2 " 
+  799  grep "sess111771" vpn_*.log 
+  800  grep "sess111771" vpn_*.log | awk '{print $4}'
+  801  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}'
+  802  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "trace=[^ ]*"
+  803  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "trace_exit_node=[^ ]*"
+  804  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "trace_exit_node=*"
+  805  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "trace_exit_node="[^ ]"
+  806  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "trace_exit_node=[^ ]"
+  807  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "trace_exit_node=[^ ]*"
+  808  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "=[^ ]*"
+  809  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "[^ ]*"
+  810  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "=[^ ]*"
+  811  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "=[^ ]"
+  812  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "=[^ ]*"
+  813  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "[^=]*$"
+  814  grep -o "sess=[^ ]*" vpn_*.log | sort | uniq -c | grep "^ *2 " 
+  815  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "[^=]*$"
+  816  history | tail -3 >> my_answer.txt
+  817  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}' | grep -o "[^=]*$" >> my_answer.txt 
+  818  cat my_answer.txt 
+  819  grep "sess111771" vpn_*.log | grep trace | awk '{print $4}'
+  820  quit
+  821  exit
+  822  top
+  823  env
+  824  env
+  825  ps 
+  826  ps -ef
+  827  ps aux
+  828  ps --help
+  829  man ps
+  830  ps -ef
+  831  ps -ef | grep ssh
+  832  top
+  833  ps -ef | grep ssh
+  834  kill -9 10217
+  835  ps -ef | grep ssh
+  836  kill -9 8759 
+  837  ps -ef | grep ssh
+  838  kill -9 8572
+  839  exit
+  840  df
+  841  df -h
+  842  free
+  843  free -h
+  844  top
+  845  free -h
+  846  free -m
+  847  cat /etc/os-release 
+  848  cat /proc/cpuinfo 
+  849  exit
+  850  w
+  851  whoami 
+  852  uname
+  853  uname -a
+  854  uname --help
+  855  uname -s
+  856  uname -r
+  857  uname -v
+  858  ls -al /opt/200226-wdm/AndreevV/
+  859  exit
+  860  ps -ef | grep ssh
+  861  df -h
+  862  -h
+  863  /dev/pts/1
+  864  sshd: ec2-user@pts/1
+  865  tty
+  866  w
+  867  ps -ef | grep sshd
+  868  ps -ef | grep sshd
+  869  ps -ef | grep sshd | grep -v root
+  870  kill ec2-user@pts/0
+  871  ps -ef | grep sshd
+  872  ps -ef | grep sshd | grep -v root
+  873  exit
+  874  kill -9 12282
+  875  ps -ef | grep sshd
+  876  kill  12525
+  877  kill -9 12525
+  878  ps -ef grep ssh
+  879  ps -ef | grep ssh
+  880  df -h
+  881  free
+  882  free -h
+  883  free -m
+  884  cat/etc/os-release
+  885  cat /etc/os-release
+  886  cat /proc/cpuinfo
+  887  w
+  888  ps -ef | grep sshd
+  889  ps -ef | grep sshd | grep -v root
+  890  kill 10821
+  891  kill 12053
+  892  kill 10663
+  893  kill 12022
+  894  kill 12026
+  895  kill 12119
+  896  /opt/121225-wde/iuliamazurenco/
+  897  ls -al /opt/121225-wde/
+  898  ls -al /opt/121225-wde/iuliamazurenco
+  899  git clone https://github.com/IuliaMazurenco12/homework-git.git
+  900  touch .gitignore
+  901  cd howework-git
+  902  pwd
+  903  /opt/121225-wde/iuliamazurenco/homework-git
+  904  cd /opt/121225-wde/iuliamazurenco/homework-git
+  905  rm -rf homework-git
+  906  https://github.com/IuliaMazurenco12/homework-git.git
+  907  git clone https://github.com/IuliaMazurenco12/homework-git.git
+  908  cd homework-git.git
+  909  cd homework-git
+  910  ls -al
+  911  touch .gitignore
+  912  touch README.md
+  913  ls
+  914  ls -al homework-git
+  915  ls -a 
+  916  git checkout -b feature
+  917  git add .
+  918  git commit -m "first commit"
+  919  git remote -v
+  920  git push origin feature
+  921  git commit --amend -m "first commit amend word"
+  922  git push --force origin feature
+  923  git checkout main
+  924  git log --all --oneline
+  925  git checkout -b main
+  926  git merge feature
+  927  git push origin main
+  928  history > history.txt
